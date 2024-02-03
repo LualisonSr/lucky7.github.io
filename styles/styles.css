@@ -22,41 +22,41 @@ body, html {
     top: 0;
     left: 0;
     object-fit: cover;
-    z-index: 2; /* Higher z-index so that it's on top */
+    z-index: 2;
 }
 
 header {
     background-color: #999999;
     color: black;
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Align items vertically */
-    justify-content: space-between; /* Space out the logo, navigation, and search */
-    padding: 5px 10px; /* Adjust padding as needed */
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 5px 10px; 
 }
 
 .logo {
-    flex: 0 1 auto; /* The logo can grow and shrink but respects its content size */
-    height: 100px; /* Adjust height as needed */
-    margin-right: 20px; /* Adds some space after the logo */
+    flex: 0 1 auto;
+    height: 100px; 
+    margin-right: 20px;
 }
 
 header h1 {
-    flex: 1 1 auto; /* The title can grow and shrink and fills the extra space */
-    font-size: 1.5em; /* Adjust font-size as needed */
+    flex: 1 1 auto; 
+    font-size: 1.5em; 
     font-weight:450;
-    margin: 0; /* Removes default margin */
-    white-space: nowrap; /* Ensures the title is in one line */
+    margin: 0; 
+    white-space: nowrap; 
 }
 
 nav {
-    flex: 1 1 auto; /* The navigation can grow and shrink */
+    flex: 1 1 auto; 
 }
 
 .header-right {
-    flex: 0 1 auto; /* The search form can grow and shrink but respects its content size */
+    flex: 0 1 auto;
 }
 
-/* Rest of your styles */
+
 
 nav ul {
     list-style: none;
