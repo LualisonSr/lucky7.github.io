@@ -1,0 +1,88 @@
+header {
+  background-color: #999999;
+  color: black;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 5px 10px; 
+  z-index: 3;
+}
+
+.logo {
+  flex: 0 1 auto;
+  height: 100px; 
+  margin-right: 20px;
+}
+
+header h1 {
+  flex: 1 1 auto; 
+  font-size: 1.5em; 
+  font-weight:450;
+  margin: 0; 
+  white-space: nowrap; 
+}
+
+nav {
+  flex: 1 1 auto; 
+}
+
+.header-right {
+  flex: 0 1 auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1em;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+section {
+  padding: 2em;
+  margin: 1em 0;
+}
+.product-details {
+    /* Add your styling here */
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.product-large-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-details h1,
+.product-details .product-price {
+    text-align: center;
+    /* Add more styling as needed */
+}
+
+.product-description,
+.product-specs {
+    margin-top: 20px;
+}
+
+.product-specs {
+    list-style: none;
+    padding: 0;
+}
+
+/* Add styles for your button */
+button {
+    display: block;
+    width: max-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    /* Add more button styling as needed */
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/cart-styles.css">
+    <title>Shopping Cart - Lucky 7 Car Dealership</title>
+</head>
+<body>
+
+<header> 
+    <img src="Lucky 7-logos_transparent.png" class="logo">
+    <h1>Dealership</h1>
+    <nav>
+    <ul>
+        <li><a class="button" href="products.html">Featured Cars</a></li>
+        <li><a class="button" href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+    <div class="header-right">
+        <form action="/search" method="get">
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</header> 
+
+<main>
+    <section class="shopping-cart">
+        <h1>Your Cart</h1>
+        <div class="cart-item">
+            <img src="path-to-product-thumbnail.jpg" alt="Product 1" class="cart-item-image">
+            <span class="cart-item-name">Product Name 1</span>
+            <span class="cart-item-price">$Price</span>
+            <input type="number" value="1" class="cart-item-quantity">
+            <button class="cart-item-remove">Remove</button>
+        </div>
+        <div class="cart-item">
+            <img src="path-to-product-thumbnail.jpg" alt="Product 2" class="cart-item-image">
+            <span class="cart-item-name">Product Name 2</span>
+            <span class="cart-item-price">$Price</span>
+            <input type="number" value="2" class="cart-item-quantity">
+            <button class="cart-item-remove">Remove</button>
+        </div>
+        <div class="cart-summary">
+    <div class="cart-subtotal">
+        <span>Subtotal:</span>
+        <span>$100.00</span>
+    </div>
+    <div class="cart-tax">
+        <span>Tax (6.75%):</span>
+        <span>$6.75</span>
+    </div>
+    <div class="cart-delivery">
+        <span>Delivery Fee:</span>
+        <span>$15.00</span>
+    </div>
+    <div class="cart-service">
+        <span>Service Fee:</span>
+        <span>$10.00</span>
+    </div>
+    <div class="cart-total">
+        <span>Total:</span>
+        <span>$131.75</span>
+    </div>
+</div>
+        <div class="cart-summary">
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <!-- Footer content here -->
+</footer>
+
+<script src="JavaScript/cart-script.js"></script>
+</body>
+</html>

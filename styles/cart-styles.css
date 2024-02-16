@@ -1,0 +1,98 @@
+header {
+  background-color: #999999;
+  color: black;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 5px 10px; 
+  z-index: 3;
+}
+
+.logo {
+  flex: 0 1 auto;
+  height: 100px; 
+  margin-right: 20px;
+}
+
+header h1 {
+  flex: 1 1 auto; 
+  font-size: 1.5em; 
+  font-weight:450;
+  margin: 0; 
+  white-space: nowrap; 
+}
+
+nav {
+  flex: 1 1 auto; 
+}
+
+.header-right {
+  flex: 0 1 auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1em;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+section {
+  padding: 2em;
+  margin: 1em 0;
+}
+.shopping-cart {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-image {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.cart-item-name,
+.cart-item-price {
+    margin-right: 10px;
+}
+
+.cart-item-quantity {
+    width: 50px; /* Adjust as needed */
+}
+
+.cart-item-remove {
+    background-color: #ff4444; /* Example color */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    background-color: #44c767; /* Example color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+
+/* Add responsive design and additional styling as needed */

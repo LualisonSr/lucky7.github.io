@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <title>Lucky 7 Car Dealership</title>
 </head>
 <body>
 
@@ -12,30 +13,38 @@
     Your browser does not support the video tag.
 </video>
 
-<header>
-    <img src = "Lucky 7-logos_transparent.png" class = "logo">
+<header> 
+    <img src="Lucky 7-logos_transparent.png" class="logo">
     <h1>Dealership</h1>
     <nav>
-        <ul>
-            <li><a href="#welcome">Welcome</a></li>
-            <li><a href="#featured">Featured Cars</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-	<div class = "header-right">
-	    <form action="/search" method="get">
-    <input type="text" name="search" placeholder="Search...">
-    <button type="submit">Search</button>
-</form>
+    <ul>
+        <li><a class="button" href="products.html">Featured Cars</a></li>
+        <li><a class="button" href="cart.html">Cart</a></li>
+        <li><a class="button" href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-	</div>
-</header>
+    <div class="header-right">
+        <form action="/search" method="get">
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</header> 
+
+<div id="container">  
+    <div id="picture-reel-container">
+        <img src="HCust1.jpg" alt="Featured Car 1" class="reel-image"> 
+        <img src="HCust2.jpg" alt="Featured Car 2" class="reel-image">
+        <img src="HCust3.jpg" alt="Featured Car 3" class="reel-image">
+    </div>
+</div> 
 
 <section id="welcome">
     <h2>Welcome to Lucky 7 Car Dealership</h2>
-    <p>Your trusted partner in finding the perfect luxury vehicle.</p>
+    <p>Your trusted partner in finding the perfect luxury vehicle. See some of our happiest customers!<br><br><br><br><br> If you need any assistance... Please see our contact information, for our other services, check out our available cars and add them to your cart. Stay cool and make your ride fly!</p>
 </section>
+
 
 <footer>
     <div class="footer-left">
@@ -50,10 +59,8 @@
     function hideVideo() {
         var video = document.getElementById('introVideo');
         video.style.display = 'none';
-        var content = document.getElementById('mainContent');
-        content.style.display = 'block';
     }
 </script>
-
+<script src="JavaScript/script.js"></script>
 </body>
 </html>

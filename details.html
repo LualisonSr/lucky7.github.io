@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Product Details - Lucky 7 Car Dealership</title>
+</head>
+<body>
+
+<header> 
+    <img src="Lucky 7-logos_transparent.png" class="logo">
+    <h1>Dealership</h1>
+    <nav>
+    <ul>
+        <li><a class="button" href="products.html">Featured Cars</a></li>
+        <li><a class="button" href="cart.html">Cart</a></li>
+        <li><a class="button" href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+    <div class="header-right">
+        <form action="/search" method="get">
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</header> 
+
+<main>
+    <section class="product-details">
+        <img src="path-to-large-product-image.jpg" alt="Large Product Image" class="product-large-image">
+        <h1>Product Name</h1>
+        <p class="product-price">$Price</p>
+        <p class="product-description">A detailed description of the product...</p>
+        <ul class="product-specs">
+            <li>Specification 1</li>
+            <li>Specification 2</li>
+            <!-- Add more specifications as needed -->
+        </ul>
+        <button onclick="addToCart()">Add to Cart</button>
+    </section>
+</main>
+
+<footer>
+    <!-- Footer content goes here -->
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
