@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+html{
+  font-family: 'Lato';
+}
+
 header {
   background-color: #999999;
   color: black;
@@ -49,6 +60,20 @@ section {
   padding: 2em;
   margin: 1em 0;
 }
+
+footer {
+  background-color: #999999;
+  color: black;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .shopping-cart {
     width: 80%;
     margin: auto;
@@ -94,5 +119,6 @@ section {
     padding: 10px 20px;
     border: none;
 }
+
 
 /* Add responsive design and additional styling as needed */

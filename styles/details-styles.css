@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+html{
+  font-family: 'Lato';
+  margin: 0;
+  padding: 0%;
+}
+
 header {
   background-color: #999999;
   color: black;
@@ -49,6 +62,20 @@ section {
   padding: 2em;
   margin: 1em 0;
 }
+
+footer {
+  background-color: #999999;
+  color: black;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .product-details {
     /* Add your styling here */
     max-width: 800px;

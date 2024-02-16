@@ -89,6 +89,12 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+
+video{
+  max-width: 100%;
+  height: auto;
+}
+
 #container {
   display: flex;
   position: fixed;
@@ -137,4 +143,4 @@ right:-100vh;
   padding: 0 1em;
 }
 
-<script src="script.js"></script>
+/* <script src="script.js"></script> */

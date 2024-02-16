@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+html{
+  margin: auto;
+  padding: 0%;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -82,4 +94,21 @@ nav ul li {
 nav ul li a {
   color: black;
   text-decoration: none;
+}
+
+footer {
+  background-color: #999999;
+  color: black;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+html{
+  font-family: 'Lato';
 }
