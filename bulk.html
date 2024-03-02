@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bulk Upload Page</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <script src="JavaScript/admin.js"></script>
 </head>
+
 <body>
-    
+    <header>
+        <a href="index.html"><img src="Lucky 7-logos_transparent.png" alt="Lucky 7" class="logo"></a>
+        <h1><a class="button" href="admin.html">Admin</a></h1>
+
+        <div class="header-right">
+            <form action="/search" method="get">
+                <input type="text" name="search" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    <section class="upload">
+        <p>Upload bulk inventory</p>
+        <button class="uploadB">Upload File</button>
+        <p class="display">Use a .json, .csv, or .txt file</p>
+    </section>
+
+
+
 </body>
+
 </html>
-<head></head>
