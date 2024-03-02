@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <script src="JavaScript/admin.js"></script>
+    <title>Admin Page</title>
 </head>
+
 <body>
-    
+    <header>
+        <a href="index.html"><img src="Lucky 7-logos_transparent.png" alt="Lucky 7" class="logo"></a>
+        <h1>Admin Page</h1>
+
+        <div class="header-right">
+            <form action="/search" method="get">
+                <input type="text" name="search" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    <p class="adminP">Welcome Admin!</p>
+    <p class="adminP">Quick Tools Access</p>
+
+    <ul>
+        <li><a class="button" href="bulk.html">Bulk Upload Veichles</a></li>
+        <li><a class="button" href="productEdit.html">Edit Vehicles</a></li>
+    </ul>
+
+    <button class="button"><a href="signout.html">Sign Out</a></button>
+
+
 </body>
+
 </html>
