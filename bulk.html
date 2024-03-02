@@ -23,8 +23,19 @@
     </header>
     <section class="upload">
         <p>Upload bulk inventory</p>
-        <button class="uploadB">Upload File</button>
-        <p class="display">Use a .json, .csv, or .txt file</p>
+        <form action="/action_page.php">
+            <input type="file" accept=".json, .csv, .xls, .txt" id="myFile" name="filename">
+            <input type="submit" class="uploadB" value="Upload">
+        </form>
+        <p class="display"> Select file type above then hit the click the Upload File button to upload the proper file.
+            <br> Please use a .json, .csv, .xls, or .txt file.
+        </p>
+
+
+    </section>
+
+    <section>
+
     </section>
 
 
