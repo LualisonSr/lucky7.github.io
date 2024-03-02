@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Contains header elements -->
     <header>
         <a href="index.html"><img src="Lucky 7-logos_transparent.png" alt="Lucky 7" class="logo"></a>
         <h1><a class="button" href="admin.html">Admin</a></h1>
@@ -21,11 +22,16 @@
             </form>
         </div>
     </header>
+
+    <!-- Added section to enable file upload -->
+
     <section class="upload">
         <p>Upload bulk inventory</p>
         <form action="/action_page.php">
             <input type="file" accept=".json, .csv, .xls, .txt" id="myFile" name="filename">
+            <!-- this allows the user to upload file -->
             <input type="submit" class="uploadB" value="Upload">
+            <!-- this allows the user to submit the file -->
         </form>
         <p class="display"> Select file type above then hit the click the Upload File button to upload the proper file.
             <br> Please use a .json, .csv, .xls, or .txt file.
@@ -33,12 +39,6 @@
 
 
     </section>
-
-    <section>
-
-    </section>
-
-
 
 </body>
 
