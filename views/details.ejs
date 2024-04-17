@@ -1,0 +1,22 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+<body>
+    <main>
+        <section class="product-details">
+            <img src="path-to-large-product-image.jpg" alt="Large Product Image" class="product-large-image">
+            <h1>Product Name</h1>
+            <p class="product-price">$Price</p>
+            <p class="product-description">A detailed description of the product...</p>
+            <ul class="product-specs">
+                <li>Specification 1</li>
+                <li>Specification 2</li>
+                <!-- Add more specifications as needed -->
+            </ul>
+            <button onclick="addToCart()">Add to Cart</button>
+        </section>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+</body>
