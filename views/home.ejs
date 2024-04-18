@@ -1,38 +1,42 @@
 <%- include('./partials/head') %>
-<%- include('./partials/header') %>
+    <%- include('./partials/header') %>
 
-<body>
+        <body>
 
-    <video id="introVideo" autoplay muted onclick="hideVideo()">
-        <source src="introVid.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+            <video id="introVideo" autoplay muted onclick="hideVideo()">
+                <source src="introVid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
-    <div id="container">
-        <div id="picture-reel-container">
-            <img src="/images/HCust1.jpg" alt="Featured Car 1" class="reel-image"> 
-            <img src="/images/HCust2.jpg" alt="Featured Car 2" class="reel-image">
-            <img src="/images/HCust3.jpg" alt="Featured Car 3" class="reel-image">
-        </div>
-    </div>
+            <div id="container">
+                <div id="picture-reel-container">
+                    <img src="/images/HCust1.jpg" alt="Featured Car 1" class="reel-image"> 
+                    <img src="/images/HCust2.jpg" alt="Featured Car 2" class="reel-image">
+                    <img src="/images/HCust3.jpg" alt="Featured Car 3" class="reel-image">
+                </div>
+            </div>
 
-    <section id="welcome">
-        <h2>Welcome to Lucky 7 Car Dealership</h2>
-        <p>Your trusted partner in finding the perfect luxury vehicle. See some of our happiest
-            customers!<br><br><br><br><br> If you need any assistance... Please see our contact information, for our
-            other services, check out our available cars and add them to your cart. Stay cool and make your ride fly!
-        </p>
-    </section>
+            <section id="welcome">
+                <h2>Welcome to Lucky 7 Car Dealership</h2>
+                <p>Your trusted partner in finding the perfect luxury vehicle. See some of our happiest
+                    customers!<br><br><br><br><br> If you need any assistance... Please see our contact information, for
+                    our
+                    other services, check out our available cars and add them to your cart. Stay cool and make your ride
+                    fly!
+                </p>
+            </section>
 
-    <%- include('./partials/footer') %>
-<link rel="stylesheet" href="/styles/styles.css">
+            <%- include('./partials/footer') %>
 
-        <script>
-            function hideVideo() {
-                var video = document.getElementById('introVideo');
-                video.style.display = 'none';
-            }
-        </script>
-<script src="/JavaScript/script.js"></script>
 
-</body>
+                <script>
+                    function hideVideo() {
+                        var video = document.getElementById('introVideo');
+                        video.style.display = 'none';
+                    }
+                </script>
+                <script src="/JavaScript/script.js"></script>
+
+        </body>
+
+        <link rel="stylesheet" href="/styles/styles.css">

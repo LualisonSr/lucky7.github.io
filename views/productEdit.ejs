@@ -1,40 +1,42 @@
 <%- include('./partials/head') %>
-<%- include('./partials/adminHeader') %>
+    <%- include('./partials/adminHeader') %>
 
-<body>
-    <section>
-        <label class="adminP" for="cars">Choose a Product ID:</label>
+        <body>
+            <section>
+                <label class="adminP" for="cars">Choose a Product ID:</label>
 
-        <select class="adminP" name="cars" id="cars">
-            <option value="1">Product 1</option>
-            <option value="saab">Product 2</option>
-            <option value="mercedes">Product 3</option>
-            <option value="audi">Product 4</option>
-        </select>
-    </section>
+                <select class="adminP" name="cars" id="cars">
+                    <option value="1">Product 1</option>
+                    <option value="saab">Product 2</option>
+                    <option value="mercedes">Product 3</option>
+                    <option value="audi">Product 4</option>
+                </select>
+            </section>
 
-    <div class="product">
-        <form action="/action_page.php">
-            <label for="fname">Product ID</label><br>
-            <input type="text" id="fname" name="fname" value="1" readonly><br>
-            <label for="lname">Category ID:</label><br>
-            <input type="text" id="lname" name="lname" value="Porsche"><br>
-            <label for="lname">Product Name:</label><br>
-            <input type="text" id="lname" name="lname" value="911 GT3 RS"><br>
-            <label for="lname">Product Description:</label><br>
-            <input type="text" id="lname" name="lname" value="Luxury Sports Car"><br>
-            <label for="lname">Image Path:</label><br>
-            <input type="text" id="lname" name="lname" value="/product.jpg"><br>
-            <label for="lname">Price:</label><br>
-            <input type="text" id="lname" name="lname" value="$40,000"><br>
-            <br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+            <div class="product">
+                <form action="/action_page.php">
+                    <label for="fname">Product ID</label><br>
+                    <input type="text" id="fname" name="fname" value="1" readonly><br>
+                    <label for="lname">Category ID:</label><br>
+                    <input type="text" id="lname" name="lname" value="Porsche"><br>
+                    <label for="lname">Product Name:</label><br>
+                    <input type="text" id="lname" name="lname" value="911 GT3 RS"><br>
+                    <label for="lname">Product Description:</label><br>
+                    <input type="text" id="lname" name="lname" value="Luxury Sports Car"><br>
+                    <label for="lname">Image Path:</label><br>
+                    <input type="text" id="lname" name="lname" value="/product.jpg"><br>
+                    <label for="lname">Price:</label><br>
+                    <input type="text" id="lname" name="lname" value="$40,000"><br>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
 
-    <section>
-        <p>Enter a new Product: <button class="button">New Product</button></p>
-    </section>
+            <section>
+                <p>Enter a new Product: <button class="button">New Product</button></p>
+            </section>
 
 
-</body>
+        </body>
+
+        <link rel="stylesheet" href="/styles/admin.css">
