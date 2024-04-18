@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/daouda/Library/CloudStorage/OneDrive-UNCG/lucky7.github.io/database/lucky.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2506"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="0" parent="0"/><expanded_item id="1" parent="0"/><expanded_item id="2" parent="0"/><expanded_item id="3" parent="0"/><expanded_item id="4" parent="0"/><expanded_item id="5" parent="0"/><expanded_item id="6" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:mainCarts"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">-- </sql><sql name="create_tables.sql">CREATE TABLE &quot;Users&quot; (
+	&quot;id&quot; INTEGER,
+	&quot;date_of_creation&quot; TEXT NOT NULL,
+	&quot;name&quot; TEXT NOT NULL,
+	&quot;email&quot; TEXT NOT NULL,
+	&quot;password&quot; TEXT NOT NULL,
+	&quot;user_type&quot; integer NOT NULL,
+	/*Making this a number to make it simple, 1 for admin, 2 for customer*/
+	PRIMARY KEY(&quot;id&quot; AUTOINCREMENT),
+	check(&quot;user_type&quot; in (1, 2)),
+	CHECK(datetime(&quot;date_of_creation&quot;) IS NOT NULL)
+	/*will check to see if the date follows ISO 8601 format*/
+);
+CREATE TABLE &quot;Categories&quot; (
+	&quot;id&quot; INTEGER,
+	&quot;category_name&quot; TEXT NOT NULL,
+	&quot;category_order&quot; INTEGER NOT NULL,
+	PRIMARY KEY(&quot;id&quot; AUTOINCREMENT)
+);
+CREATE TABLE &quot;Products&quot; (
+	&quot;id&quot; INTEGER,
+	&quot;product_name&quot; TEXT NOT NULL,
+	&quot;description&quot; TEXT NOT NULL,
+	&quot;image_url&quot; TEXT NOT NULL,
+	&quot;price&quot; NUMERIC(12, 2) NOT NULL,
+	/*this and the check for it ensure it is in proper monetary format*/
+	&quot;details&quot; TEXT NOT NULL,
+	&quot;category_id&quot; INTEGER NOT NULL,
+	&quot;featured&quot; INTEGER NOT NULL,
+	FOREIGN KEY(&quot;category_id&quot;) REFERENCES &quot;Categories&quot;(&quot;id&quot;),
+	PRIMARY KEY(&quot;id&quot; AUTOINCREMENT),
+	check (&quot;price&quot; &gt; 0)
+);
+CREATE TABLE &quot;Carts&quot; (
+	&quot;id&quot; INTEGER,
+	&quot;cart_status&quot; INTEGER NOT NULL,
+	/*Making this a number to make it simple, 1 for new, 2 for abandoned, and 3 for purchased*/
+	&quot;date_of_creation&quot; TEXT NOT NULL,
+	&quot;user_id&quot; INTEGER NOT NULL UNIQUE,
+	/*ensures a one-to-one relationship*/
+	FOREIGN KEY(&quot;user_id&quot;) REFERENCES &quot;Users&quot;(&quot;id&quot;),
+	PRIMARY KEY(&quot;id&quot; AUTOINCREMENT),
+	check(&quot;cart_status&quot; in (1, 2, 3)),
+	CHECK(datetime(&quot;date_of_creation&quot;) IS NOT NULL)
+	/*will check to see if the date follows ISO 8601 format*/
+);
+CREATE TABLE &quot;CartsProductsSubquantities&quot; (
+	&quot;cart_product_id&quot; INTEGER NOT NULL,
+	&quot;subquantity&quot; INTEGER NOT NULL,
+	PRIMARY KEY (&quot;cart_product_id&quot;),
+	FOREIGN KEY(&quot;cart_product_id&quot;) REFERENCES &quot;CartsProducts&quot;(&quot;id&quot;)
+);
+CREATE TABLE &quot;CartsProducts&quot; (
+	&quot;id&quot; INTEGER,
+	&quot;cart_id&quot; INTEGER NOT NULL,
+	&quot;product_id&quot; INTEGER NOT NULL,
+	&quot;quantity&quot; INTEGER NOT NULL,
+	/*Will be the sum of all &quot;subquantity&quot; rows*/
+	PRIMARY KEY(&quot;id&quot; AUTOINCREMENT),
+	FOREIGN KEY(&quot;cart_id&quot;) REFERENCES &quot;Carts&quot;(&quot;id&quot;),
+	FOREIGN KEY(&quot;product_id&quot;) REFERENCES &quot;Products&quot;(&quot;id&quot;),
+	UNIQUE(&quot;cart_id&quot;, &quot;product_id&quot;)
+);
+/*will trigger when a delete or insert action occurs on the table &quot;CartsProductsSubquantities&quot; and brings the total amount of cars in the cart to the &quot;quantity&quot; column*/
+CREATE TRIGGER &quot;update_cart_quantity_insert&quot;
+AFTER
+INSERT ON &quot;CartsProductsSubquantities&quot; BEGIN
+UPDATE &quot;CartsProducts&quot;
+SET &quot;quantity&quot; = (
+		SELECT SUM(&quot;subquantity&quot;)
+		FROM CartsProductsSubquantities
+		WHERE cart_product_id = NEW.cart_product_id
+	)
+WHERE id = NEW.cart_product_id;
+END;
+CREATE TRIGGER &quot;update_cart_quantity_delete&quot;
+AFTER delete ON &quot;CartsProductsSubquantities&quot; BEGIN
+UPDATE &quot;CartsProducts&quot;
+SET &quot;quantity&quot; = (
+		SELECT SUM(&quot;subquantity&quot;)
+		FROM CartsProductsSubquantities
+		WHERE cart_product_id = OLD.cart_product_id
+	)
+WHERE id = OLD.cart_product_id;
+END;</sql><current_tab id="1"/></tab_sql></sqlb_project>
