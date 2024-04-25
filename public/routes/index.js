@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-let Database = require('../lucky.db');
+// let Database = require('../lucky.db');
 
 // Route for the home page
 router.get('/', (req, res) => {

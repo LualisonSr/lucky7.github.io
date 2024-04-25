@@ -143,4 +143,23 @@ right:-100vh;
   padding: 0 1em;
 }
 
+.contactCenter{
+  text-align: center;
+}
+
+.question{
+  width: 20%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+hr{
+  color: black;
+  border-color: black;
+  background-color: black;
+}
+
 /* <script src="script.js"></script> */
