@@ -14,12 +14,12 @@ router.get('/home', (req, res) => {
 
 // Route for the products page
 router.get('/products', (req, res) => {
-    res.render('products', {description: description, price: price, productName: product_name, image: image_url, details: details});
+    res.render('products');
 });
 
 // Route for the cart page
 router.get('/cart', (req, res) => {
-    res.render('cart', {cartStatus: cart_status, creationDate: date_of_creation, cartQuantity, subquantity});
+    res.render('cart');
 });
 
 // Route for the contact page
@@ -29,7 +29,7 @@ router.get('/contact', (req, res) => {
 
 // Route for the product details page
 router.get('/products/details', (req, res) => {
-    res.render('details', {description: description, price: price, productName: product_name, details: details});
+    res.render('details');
 });
 
 // Route for the admin main page
@@ -39,12 +39,12 @@ router.get('/admin', (req, res) => {
 
 // Route for the bulk edit page under admin
 router.get('/admin/bulk', (req, res) => {
-    res.render('bulk', {description: description, price: price, productName: product_name, details: details, image: image_url});
+    res.render('bulk');
 });
 
 // Route for the product edit page under admin
 router.get('/admin/productEdit', (req, res) => {
-    res.render('productEdit', {description: description, price: price, productName: product_name, details: details, image: image_url});
+    res.render('productEdit');
 });
 
 // Route for the admin signout page
