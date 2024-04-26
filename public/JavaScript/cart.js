@@ -4,6 +4,8 @@ function updateQuantity(index, newQuantity) {
 
 function removeItem(index) {
     // Placeholder for future implementation
+    console.log("Button element", index)
+    index.parentElement.remove()
 }
 
 function calculateTotal() {

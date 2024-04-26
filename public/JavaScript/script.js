@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
-let images = ["HCust1.jpg", "HCust2.jpg", "HCust3.jpg"]; 
+let images = ["/images/HCust1.jpg", "/images/HCust2.jpg", "/images/HCust3.jpg"]; 
 let currentIndex = 0; // Start with the first image
 let imgElement = document.querySelector(".reel-image");
 
