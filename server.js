@@ -1,4 +1,5 @@
 const express = require('express');
+const passport = require('passport');
 const app = express();
 const path = require('path');
 const indexRoutes = require('./public/routes/index');
@@ -16,3 +17,8 @@ app.use('/', indexRoutes);
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+

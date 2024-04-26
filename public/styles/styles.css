@@ -124,6 +124,9 @@ right:-100vh;
 }
 #welcome {
     width: 40%;  /* Adjust percentage or use a fixed pixel value like '500px' */
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: auto;
 }
 .button {
   display: inline-block;
